@@ -255,6 +255,7 @@ export const CompSelectionWrapper = (props: {
   resizeHandles: ResizeHandleAxis[];
   resizeIconSize: "small" | "normal";
 }) => {
+  console.log("🚀 ~ props:", props)
   const nameDivRef = useRef<HTMLDivElement>(null);
   const editorState = useContext(EditorContext);
   let [hover, setHover] = useState(false);
@@ -322,7 +323,7 @@ export const CompSelectionWrapper = (props: {
   // log.debug("CompSelectionWrapper. name: ", props.name, " zIndex: ", zIndex);
   const { nameConfig, resizeIconSize } = props;
   return (
-    <div id={props.id} style={{ ...props.style, zIndex }} className={props.className}>
+    <div id={props.id} style={{ ...props.style, zIndex,height:'500px !important',width:'500px !important',background:'red !important' }} className={props.className}>
       <SelectableDiv
         {...selectableDivProps}
         $compType={props.compType}
