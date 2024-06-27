@@ -40,10 +40,20 @@ export const getStyle = (style: CheckboxStyleType) => {
         ${EllipsisTextCss};
       }
 
+      .ant-checkbox .ant-checkbox-checked > .ant-checkbox-inner {
+        border-color: ${style.checkedBorder};
+        border-width:${!!style.borderWidth ? style.borderWidth : '2px'};
+      }
+
+      .ant-checkbox:not(.ant-checkbox-checked) > .ant-checkbox-inner{
+        border-color: ${style.uncheckedBorder};
+        border-width:${!!style.borderWidth ? style.borderWidth : '2px'};
+      }
+
       .ant-checkbox-checked {
         .ant-checkbox-inner {
           background-color: ${style.checkedBackground};
-          border-color: ${style.checkedBackground};
+          border-color: ${style.checkedBorder};
           border-width:${!!style.borderWidth ? style.borderWidth : '2px'};
 
           &::after {
@@ -52,17 +62,17 @@ export const getStyle = (style: CheckboxStyleType) => {
         }
 
         &::after {
-          border-color: ${style.checkedBackground};
+          border-color: ${style.checkedBorder};
           border-width:${!!style.borderWidth ? style.borderWidth : '2px'};
           border-radius: ${style.radius};
         }
       }
       
       .ant-checkbox-inner {
-        border-radius: ${style.radius};
         background-color: ${style.uncheckedBackground};
-        border-color: ${style.uncheckedBorder};
-        border-width:${!!style.borderWidth ? style.borderWidth : '2px'};
+        border-radius: ${style.radius};
+        border-color: ${style.checkedBorder};
+        border-width:${style.borderWidth ? style.borderWidth : '2px'};
       }
     
       &:hover .ant-checkbox-inner, 
@@ -80,7 +90,7 @@ export const getStyle = (style: CheckboxStyleType) => {
       &:hover .ant-checkbox-inner,
       .ant-checkbox:hover .ant-checkbox-inner,
       .ant-checkbox-input:focus + .ant-checkbox-inner {
-        border-color: ${style.checkedBackground};
+        border-color: ${style.checkedBorder};
         border-width:${!!style.borderWidth ? style.borderWidth : '2px'};
       }
     }
