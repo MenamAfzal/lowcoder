@@ -140,6 +140,7 @@ import {
   ResponsiveLayoutCompIcon,
   MermaidCompIcon,
 } from "lowcoder-design";
+import { kanbanComp } from "./comps/kanbanComp/kanbanComp";
 
 type Registry = {
   [key in UICompType]?: UICompManifest;
@@ -161,6 +162,19 @@ var uiCompMap: Registry = {
     icon: ChartCompIcon,
     comp: remoteComp({ ...builtInRemoteComps, compName: "chart" }),
     keywords: trans("uiComp.chartCompKeywords"),
+    layoutInfo: {
+      w: 12,
+      h: 40,
+    },
+  },
+  kanban: {
+    name: 'Kanban',
+    enName: 'Kanban',
+    description: trans('uiComp.chartCompDesc'),
+    categories: ['dashboards'],
+    icon: ChartCompIcon,
+    comp: kanbanComp,
+    keywords: trans('uiComp.chartCompKeywords'),
     layoutInfo: {
       w: 12,
       h: 40,

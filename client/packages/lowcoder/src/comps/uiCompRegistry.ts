@@ -56,6 +56,7 @@ export interface UICompManifest {
 }
 
 export type UICompType =
+  "kanban" 
   | "input"
   | "module"
   | "moduleContainer"

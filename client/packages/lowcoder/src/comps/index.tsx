@@ -155,6 +155,25 @@ export var uiCompMap: Registry = {
     },
   },
 
+  kanban: {
+    name: 'kanban',
+    enName: "kanban",
+    description: trans("uiComp.autoCompleteCompDesc"),
+    categories: ["dashboards"],
+    icon: AutoCompleteCompIcon,
+    keywords: cnchar
+      .spell(trans("uiComp.autoCompleteCompName"), "first", "low")
+      .toString(),
+    lazyLoad: true,
+    compName: "kanbanComp",
+    compPath: "comps/kanbanComp/kanbanComp",
+    layoutInfo: {
+      w: 6,
+      h: 5,
+    },
+    defaultDataFnName: "kanbanComp",
+    defaultDataFnPath: "comps/kanbanComp/kanbanComp",
+  },
   candleStickChart: {
     name: trans("uiComp.candleStickChartCompName"),
     enName: "Candlestick Chart",

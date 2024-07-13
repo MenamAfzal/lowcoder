@@ -107,6 +107,7 @@ import {
 export const CompStateIcon: {
   [key in UICompType]: JSX.Element;
 } = {
+  kanban: <CalendarCompIconSmall />,
   audio: <AudioCompIconSmall />,
   autocomplete: <AutoCompleteCompIconSmall />,
   button: <ButtonCompIconSmall />,
