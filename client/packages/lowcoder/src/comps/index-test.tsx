@@ -140,7 +140,7 @@ import {
   ResponsiveLayoutCompIcon,
   MermaidCompIcon,
 } from "lowcoder-design";
-import { kanbanComp } from "./comps/kanbanComp/kanbanComp";
+import kanbanComp  from "./comps/kanbanComp/kanbanComp";
 
 type Registry = {
   [key in UICompType]?: UICompManifest;

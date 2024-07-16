@@ -165,7 +165,7 @@ export var uiCompMap: Registry = {
       .spell(trans("uiComp.autoCompleteCompName"), "first", "low")
       .toString(),
     lazyLoad: true,
-    compName: "kanbanComp",
+    compName: "GanttOptionControl",
     compPath: "comps/kanbanComp/kanbanComp",
     layoutInfo: {
       w: 6,

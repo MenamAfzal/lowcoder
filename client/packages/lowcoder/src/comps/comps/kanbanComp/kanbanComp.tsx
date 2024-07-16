@@ -596,5 +596,8 @@ ContainerBaseComp = class extends ContainerBaseComp {
   }
 };
 
-export const kanbanComp = ContainerBaseComp;
+export default withExposingConfigs(ContainerBaseComp, [
+  new NameConfig('data', trans('component.data')),
+  NameConfigHidden,
+]);
 
