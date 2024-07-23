@@ -6,6 +6,7 @@
   "main": "src/index.sdk.ts",
   "types": "src/index.sdk.ts",
   "dependencies": {
+    "@ant-design/cssinjs": "^1.21.0",
     "@ant-design/icons": "^5.3.0",
     "@codemirror/autocomplete": "^6.11.1",
     "@codemirror/commands": "^6.3.2",
@@ -37,7 +38,7 @@
     "@types/react-test-renderer": "^18.0.0",
     "@types/react-virtualized": "^9.21.21",
     "animate.css": "^4.1.1",
-    "antd": "5.13.2",
+    "antd": "^5.19.3",
     "axios": "^1.6.2",
     "buffer": "^6.0.3",
     "clsx": "^2.0.0",
